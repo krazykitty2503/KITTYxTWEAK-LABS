@@ -1,0 +1,1944 @@
+# KITTY × TWEAK LABS
+## Research Master Plan v1.0
+
+**Models • Systems • Kernels • Agents • Cybersecurity • Distributed Computing**
+
+**Version:** 1.0  
+**Created:** 21 September 2026  
+**Founders / Researchers:** Kitty × Tweak  
+**Status:** Active Research Master Plan
+
+---
+
+# 1. Mission
+
+**Kitty × Tweak Labs** is a collaborative independent research and engineering laboratory focused on building, understanding, benchmarking, and experimenting with modern computing systems.
+
+The lab brings together two complementary areas of work:
+
+**Kitty**
+- KittyLM
+- KittyOS
+- KERNEL//KITTY
+- Debian home-lab infrastructure
+- Python and automation
+- AI agents
+- cybersecurity research
+- containers and distributed systems
+- developer tooling
+- Discord and Telegram systems
+- local AI infrastructure
+- reproducible machine-learning experiments
+
+**Tweak**
+- TweakTron
+- TweakOS
+- experimental language-model architectures
+- GDN / GDN2
+- FlashQLA
+- Mixture-of-Memory research
+- tokenizer research
+- sparse and dense architecture experiments
+- inference optimization
+- architecture transformation and model conversion research
+
+Together, these form the basis for a broader research environment:
+
+> **KITTY × TWEAK LABS — building models, operating systems, agents, infrastructure and experimental computing systems from first principles.**
+
+The aim is not simply to use existing AI systems.
+
+The aim is to understand them deeply enough to **build, modify, benchmark, deploy and eventually invent our own.**
+
+---
+
+# 2. Core Research Philosophy
+
+Kitty × Tweak Labs will prioritize:
+
+### Build before scale
+
+Small, understandable experiments come before expensive scaling.
+
+A 100M-parameter experiment that answers a research question is more useful than an unexplained multi-billion-parameter model.
+
+### Measure before claiming
+
+Research conclusions should be supported by:
+
+- benchmarks
+- ablation studies
+- profiling
+- reproducible experiments
+- test suites
+- parameter accounting
+- hardware measurements
+- dataset provenance
+- documented limitations
+
+### Reproduce before optimize
+
+Every important experiment should ideally be reproducible from:
+
+- repository commit
+- configuration
+- dataset version/hash
+- tokenizer version
+- random seed
+- hardware description
+- environment
+- model checkpoint
+- evaluation configuration
+
+### Understand before abstracting
+
+Important components should be implemented or inspected directly before relying entirely on large frameworks.
+
+### Local-first research
+
+Where practical, experiments should run on hardware controlled by Kitty × Tweak Labs.
+
+Cloud compute should later supplement the lab rather than replace understanding of the underlying systems.
+
+### Open research where appropriate
+
+Research, code, benchmarks and educational material should be published where licensing, security and dataset restrictions allow.
+
+---
+
+# 3. The Kitty × Tweak Research Ecosystem
+
+The ecosystem consists of five major layers.
+
+## Layer 1 — Models
+
+### KittyLM
+
+KittyLM is Kitty's long-term language-model research platform.
+
+The currently developed KittyLM becomes the **foundation model family** from which future KittyLM generations and specialized models can evolve.
+
+Research areas include:
+
+- tokenizer design
+- dataset construction
+- decoder-only Transformers
+- attention architecture
+- GDN/GDN2 experiments
+- state-space and recurrent systems
+- sparse models
+- Mixture-of-Experts
+- Mixture-of-Memory
+- long-context architectures
+- adaptive computation
+- coding models
+- cybersecurity models
+- agent-oriented models
+- reasoning systems
+- inference optimization
+
+### TweakTron
+
+TweakTron serves as Tweak's experimental model family and architecture research platform.
+
+Important existing directions include:
+
+- approximately 3.47B dense model research
+- Qwen-derived architecture work
+- custom ~65K BPE tokenizer
+- architecture conversion experiments
+- GDN/GDN2
+- FlashQLA
+- Mixture-of-Memory
+- sparse architecture research
+- inference benchmarking
+
+TweakTron also provides an invaluable comparison platform for KittyLM.
+
+Instead of both researchers independently reproducing the same experiments, the two model families can intentionally explore different approaches.
+
+---
+
+# 4. KittyLM × TweakTron Comparative Research
+
+One of the most valuable capabilities of Kitty × Tweak Labs will be having **two independently developed model families**.
+
+This creates opportunities for controlled comparative research.
+
+Example:
+
+```text
+                 KITTY × TWEAK LABS
+
+             ┌─────────────┐
+             │ Research Q  │
+             └──────┬──────┘
+                    │
+          ┌─────────┴─────────┐
+          │                   │
+      KittyLM             TweakTron
+          │                   │
+     Architecture A      Architecture B
+          │                   │
+          └─────────┬─────────┘
+                    │
+                 Benchmark
+                    │
+                    ▼
+            Shared Research Data
+```
+
+Areas to compare include:
+
+- tokenizer efficiency
+- model architecture
+- convergence
+- memory usage
+- training stability
+- inference speed
+- reasoning performance
+- code generation
+- structured output
+- long context
+- multilingual performance
+- cybersecurity knowledge
+- tool calling
+- agent behaviour
+
+The objective is not to determine that one model is universally "better."
+
+Instead:
+
+> **Determine which architectural choices work best under particular workloads and compute constraints.**
+
+---
+
+# 5. Architecture Research Matrix
+
+A formal architecture experiment tree should be maintained.
+
+Current research directions can include:
+
+| ID | Architecture | Density | Coupling |
+|---|---|---|---|
+| C1 | Baseline architecture | Dense | Coupled |
+| C2 | Alternative architecture | Dense | Decoupled |
+| C1S | Baseline sparse | Sparse | Coupled |
+| C2S | Alternative sparse | Sparse | Decoupled |
+
+Specific experiments may include:
+
+- C1S + FLA
+- C1S + FlashQLA
+- C2S variants
+- Transformer baselines
+- GDN
+- GDN2
+- recurrent systems
+- SSM hybrids
+- MoE
+- MoM
+
+Every architectural change should attempt to answer a concrete question.
+
+Example:
+
+> Does FlashQLA reduce inference latency while preserving quality relative to the equivalent FLA configuration?
+
+---
+
+# 6. Tokenizer Research Program
+
+Tokenizer design becomes a dedicated Kitty × Tweak research area.
+
+Candidate vocabulary sizes:
+
+- 8K
+- 12K
+- 16K
+- 24K
+- 32K
+- 65,536
+- larger experimental vocabularies such as ~248K
+
+Domains should include:
+
+- Python
+- C
+- C++
+- Rust
+- JavaScript
+- TypeScript
+- JSON
+- Markdown
+- mathematics
+- English
+- multilingual text
+- shell commands
+- Linux logs
+- cybersecurity terminology
+- structured agent messages
+
+Measurements should include:
+
+- characters per token
+- bytes per token
+- tokens per sample
+- code compression
+- multilingual efficiency
+- JSON efficiency
+- vocabulary utilization
+- embedding parameter cost
+- inference implications
+
+Large benchmark datasets should eventually contain **100M–1B+ stratified characters** where licensing and compute permit.
+
+Confidence intervals and repeatable evaluation should be used where useful.
+
+---
+
+# 7. DataForge — Dataset Research Platform
+
+A future shared project should be:
+
+## DataForge
+
+DataForge manages dataset:
+
+- collection
+- ingestion
+- normalization
+- filtering
+- deduplication
+- licensing
+- provenance
+- hashing
+- versioning
+- contamination analysis
+- sampling
+- train/eval splitting
+
+Conceptual pipeline:
+
+```text
+Raw Sources
+    ↓
+Ingestion
+    ↓
+License / Provenance Check
+    ↓
+Normalization
+    ↓
+Deduplication
+    ↓
+Quality Filtering
+    ↓
+Domain Classification
+    ↓
+Dataset Manifest
+    ↓
+Versioned Dataset
+    ↓
+Training / Evaluation
+```
+
+Datasets should never become anonymous folders of text.
+
+Every dataset version should ideally answer:
+
+- Where did this data come from?
+- What license applies?
+- What preprocessing was performed?
+- Which files were removed?
+- Which hash identifies this version?
+- Which model trained on it?
+
+---
+
+# 8. Model Evolution Program
+
+Rather than treating KittyLM as a single model, it becomes a **multi-generation research family**.
+
+## KittyLM 1.x
+
+Purpose:
+
+**Foundation and reproducibility.**
+
+Research:
+
+- tokenizer
+- dataset pipeline
+- decoder-only Transformer
+- training loop
+- evaluation
+- generation
+- checkpointing
+- reproducibility
+
+Focus:
+
+> Learn how every part of the model works.
+
+---
+
+## KittyLM 2.x
+
+Purpose:
+
+**Architecture experimentation.**
+
+Possible research:
+
+- RoPE variants
+- RMSNorm variants
+- attention alternatives
+- GQA/MQA
+- GDN
+- recurrent layers
+- hybrid Transformer systems
+- FlashAttention-style optimization
+- improved tokenization
+
+---
+
+## KittyLM 3.x
+
+Purpose:
+
+**Sparse intelligence.**
+
+Possible research:
+
+- Mixture-of-Experts
+- shared experts
+- sparse routing
+- Mixture-of-Memory
+- expert specialization
+- routing stability
+- sparse training efficiency
+
+---
+
+## KittyLM 4.x
+
+Purpose:
+
+**Long-context and adaptive computation.**
+
+Possible research:
+
+- recurrent memory
+- long context
+- retrieval
+- external memory
+- adaptive halting
+- iterative reasoning
+- hierarchical memory
+
+---
+
+## Later KittyLM generations
+
+Potential areas:
+
+- multimodality
+- computer vision
+- speech
+- tool use
+- agent systems
+- operating-system integration
+- robotics
+- distributed inference
+- specialist model families
+
+---
+
+# 9. Specialist KittyLM Models
+
+The KittyLM ecosystem can eventually contain specialized descendants.
+
+Examples:
+
+### KittyCoder
+
+Coding assistant trained and evaluated primarily for:
+
+- Python
+- C++
+- Rust
+- TypeScript
+- JavaScript
+- Bash
+- infrastructure code
+
+### CyberKitty / KittyCyberLM
+
+Defensive cybersecurity research model covering:
+
+- blue-team analysis
+- log interpretation
+- secure coding
+- incident-response education
+- threat modelling
+- defensive research labs
+
+### KittyAgent
+
+Model optimized for:
+
+- structured tool calls
+- JSON
+- planning
+- task execution
+- MCP
+- agent orchestration
+
+### TinyKitty
+
+Small models designed for:
+
+- Raspberry Pi
+- edge computing
+- low-memory inference
+- embedded research
+
+### KittyResearch
+
+Model specializing in:
+
+- scientific papers
+- technical documents
+- experiment summaries
+- citation-oriented research workflows
+
+These should share research foundations rather than become completely unrelated models.
+
+---
+
+# 10. KittyTron — Joint Experimental Model
+
+One of the flagship long-term research projects should be:
+
+# KittyTron
+
+KittyTron would combine discoveries from both model families.
+
+It should **not** simply concatenate KittyLM and TweakTron.
+
+Instead, KittyTron should emerge after experiments identify which techniques are worth combining.
+
+Candidate components might eventually include:
+
+```text
+KittyLM research
+    │
+    ├── reproducibility
+    ├── dataset pipeline
+    ├── evaluation
+    ├── agents
+    └── systems integration
+
+                 ┐
+                 ├──► KITTYTRON
+                 ┘
+
+TweakTron research
+    │
+    ├── GDN
+    ├── GDN2
+    ├── FlashQLA
+    ├── MoM
+    └── architecture conversion
+```
+
+KittyTron therefore becomes a **research synthesis model**, not merely another checkpoint.
+
+---
+
+# 11. DualForge
+
+## Purpose
+
+DualForge becomes the shared training and model experimentation framework.
+
+It could eventually provide:
+
+- training configuration
+- distributed training
+- experiment launch
+- checkpoint management
+- evaluation
+- benchmarking
+- profiling
+- hyperparameter sweeps
+- model comparison
+- experiment registry
+
+Example:
+
+```bash
+dualforge train experiments/kittylm-2b.yaml
+dualforge eval checkpoint/kittylm-2b
+dualforge compare kittylm tweaktron
+dualforge profile experiment-482
+```
+
+---
+
+# 12. ReasonKit
+
+ReasonKit becomes a shared evaluation framework.
+
+Domains:
+
+- logical reasoning
+- mathematics
+- programming
+- debugging
+- structured output
+- cybersecurity
+- system administration
+- tool usage
+- long-context retrieval
+
+ReasonKit should record:
+
+- prompt
+- model
+- configuration
+- answer
+- runtime
+- tokens
+- memory use
+- score
+- grader
+- experiment version
+
+---
+
+# 13. Public Benchmark Suite
+
+Kitty × Tweak Labs should eventually publish a reproducible benchmark suite.
+
+Possible benchmark families:
+
+```text
+KTL-Code
+KTL-Reason
+KTL-Agent
+KTL-Cyber
+KTL-Context
+KTL-Tokenizer
+KTL-Inference
+KTL-Systems
+```
+
+This allows external researchers to reproduce findings rather than relying on screenshots or anecdotal comparisons.
+
+---
+
+# 14. AI Agent Research
+
+Agent research becomes another major lab program.
+
+Key questions:
+
+- How should models call tools?
+- How much planning is useful?
+- When should an agent ask for permission?
+- How should memory work?
+- How should agents recover from errors?
+- How should agents validate their own actions?
+- How can agent systems remain observable and auditable?
+
+Possible shared project:
+
+# AgentVerse
+
+AgentVerse would provide:
+
+- agent runtime
+- task queue
+- tool permissions
+- MCP integration
+- memory
+- event logging
+- execution traces
+- sandboxing
+- evaluation
+
+Agents could interact with:
+
+- KittyOS
+- TweakOS
+- GitHub
+- servers
+- model APIs
+- development environments
+- lab infrastructure
+
+---
+
+# 15. MCP Security Lab
+
+Because tool-connected AI introduces new attack surfaces, Kitty × Tweak Labs should maintain an **MCP Security Lab**.
+
+Research questions:
+
+- malicious tool responses
+- prompt injection
+- privilege escalation
+- tool impersonation
+- secret leakage
+- unsafe filesystem access
+- network restrictions
+- sandbox escape prevention
+- agent authorization models
+
+This connects Kitty's cybersecurity studies directly with AI agent research.
+
+---
+
+# 16. Operating-System Research
+
+The lab includes two operating-system directions.
+
+## KittyOS
+
+KittyOS can evolve into Kitty's Linux distribution and AI-oriented developer environment.
+
+Possible focus:
+
+- development
+- cybersecurity
+- AI tooling
+- local model execution
+- agent integration
+- containers
+- observability
+- automation
+
+## TweakOS
+
+TweakOS represents Tweak's complementary systems research.
+
+Rather than forcing them into one OS, interoperability should be researched.
+
+---
+
+# 17. TweakOS ↔ KittyOS Interoperability
+
+Possible shared standards:
+
+```text
+KittyOS
+   │
+   ├── KTL Agent Protocol
+   ├── KTL Model API
+   ├── KTL Telemetry
+   └── KTL Package Format
+              │
+              ▼
+           TweakOS
+```
+
+Research areas:
+
+- shared APIs
+- distributed jobs
+- remote execution
+- model serving
+- package interoperability
+- agent protocols
+- telemetry
+- security policy
+
+---
+
+# 18. SoulShell
+
+SoulShell can become an experimental shared shell/environment bridging both systems.
+
+Potential capabilities:
+
+- AI-assisted shell
+- command explanation
+- task automation
+- server management
+- model interaction
+- remote nodes
+- experiment execution
+- structured logs
+
+Example:
+
+```bash
+soul train kittylm experiment-43
+soul benchmark tweaktron tokenizer
+soul nodes
+soul deploy kitty-agent
+```
+
+---
+
+# 19. KERNEL//KITTY
+
+KERNEL//KITTY remains Kitty's central infrastructure and observability project.
+
+It becomes part of the broader lab infrastructure.
+
+Responsibilities:
+
+- system monitoring
+- telemetry
+- Docker monitoring
+- storage status
+- networking
+- service health
+- security status
+- AI service status
+- experiment monitoring
+- GPU telemetry
+- lab dashboards
+
+Future KERNEL//KITTY pages could include:
+
+- Overview
+- Compute
+- Storage
+- Network
+- AI Models
+- Experiments
+- Training
+- Containers
+- Kubernetes
+- Agents
+- Security
+- Logs
+- CI/CD
+
+---
+
+# 20. Kitty × Tweak Compute Fabric
+
+The home lab should gradually evolve into a distributed compute environment.
+
+Initial concept:
+
+```text
+                     KTL COMPUTE FABRIC
+
+       ┌─────────────────────────────────┐
+       │       Debian-Kitty Server       │
+       │      Control / Services Node    │
+       └──────────────┬──────────────────┘
+                      │
+                2.5/5/10 GbE
+                      │
+       ┌──────────────┼───────────────┐
+       │              │               │
+       ▼              ▼               ▼
+
+ Kitty Workstation   Tweak Node    Future GPU Node
+ RX 9060 XT          RTX 5050     High-VRAM GPU
+ 16 GB VRAM          Blackwell
+       │
+       ├──────── Raspberry Pi Nodes
+       │
+       ├──────── Storage / NAS
+       │
+       └──────── Edge Devices
+```
+
+The objective is eventually to treat the lab as **one compute environment instead of isolated PCs**.
+
+---
+
+# 21. Current Kitty Compute Node
+
+Current known Kitty workstation:
+
+- AMD Ryzen 5 7500F
+- 6 cores / 12 threads
+- AMD Radeon RX 9060 XT
+- 16 GB VRAM
+- 32 GB DDR5
+- approximately 5 TB total storage
+- Windows development environment
+- ROCm-compatible local ML research environment
+- Docker
+- local model systems
+- VMs
+- cybersecurity labs
+
+Primary responsibilities:
+
+- KittyLM development
+- model training
+- model inference
+- development
+- VM labs
+- dataset processing
+
+---
+
+# 22. Current Tweak Compute Node
+
+Known Tweak hardware includes an:
+
+- NVIDIA RTX 5050 Laptop GPU
+- Blackwell-generation architecture
+- SM120 compute architecture
+
+This provides an important complementary environment.
+
+Kitty × Tweak therefore gain access to:
+
+```text
+AMD / ROCm environment
+        +
+NVIDIA / CUDA environment
+```
+
+That is extremely useful for:
+
+- portability testing
+- kernel research
+- inference comparison
+- architecture benchmarking
+- backend compatibility
+- performance research
+
+---
+
+# 23. CrossSilicon
+
+A dedicated project should exploit this hardware difference.
+
+# CrossSilicon
+
+Purpose:
+
+Compare AI workloads across:
+
+- AMD
+- NVIDIA
+- ROCm
+- CUDA
+
+Measurements:
+
+- throughput
+- latency
+- VRAM
+- wattage
+- kernel support
+- compilation
+- numerical behaviour
+- framework compatibility
+
+This creates research that many single-vendor hobby labs cannot easily perform.
+
+---
+
+# 24. Debian-Kitty Home Server
+
+Kitty's Debian server becomes the first infrastructure node of Kitty × Tweak Labs.
+
+Roles may include:
+
+- Git services
+- CI runners
+- Docker
+- monitoring
+- databases
+- artifact storage
+- dashboards
+- model registry
+- experiment metadata
+- backup
+- agent services
+- telemetry
+- DNS
+- reverse proxy
+- KERNEL//KITTY
+
+The server should increasingly act as the **control plane**, while GPUs remain dedicated compute nodes.
+
+---
+
+# 25. Home-Lab Expansion Roadmap
+
+Hardware should be acquired because it enables research, not because it merely increases specifications.
+
+## Stage 1 — Current Lab
+
+Use:
+
+- Kitty workstation
+- Tweak workstation/laptop
+- Debian-Kitty server
+- existing storage
+- virtualization
+- Docker
+
+Research focus:
+
+- software
+- small models
+- infrastructure
+- reproducibility
+
+---
+
+## Stage 2 — Memory and Storage Expansion
+
+Kitty workstation:
+
+**32 GB → 64 GB → potentially 96/128 GB RAM**
+
+Benefits:
+
+- dataset preprocessing
+- larger models
+- VMs
+- containers
+- compilation
+- distributed services
+
+Storage:
+
+Move toward dedicated research storage / NAS.
+
+Suggested long-term capacity class:
+
+**4–20+ TB usable storage**
+
+Used for:
+
+- datasets
+- checkpoints
+- experiments
+- backups
+- container volumes
+- model archives
+
+---
+
+# 26. Dedicated AI Compute Node
+
+A future major milestone should be a dedicated GPU machine.
+
+This should prioritize:
+
+- VRAM
+- memory bandwidth
+- Linux support
+- ML framework support
+- power efficiency
+- cooling
+- upgradeability
+
+Instead of replacing existing hardware, it joins the cluster.
+
+Possible role:
+
+```text
+GPU-NODE-01
+├── training
+├── inference
+├── fine-tuning
+├── benchmarking
+└── batch experiments
+```
+
+---
+
+# 27. Raspberry Pi / Edge Cluster
+
+Raspberry Pis can provide a low-power research environment.
+
+Potential uses:
+
+- k3s
+- distributed services
+- TinyKitty inference
+- monitoring
+- DNS
+- MQTT
+- IoT
+- edge agents
+- ARM benchmarking
+
+This should not be treated as a replacement for GPU compute.
+
+Its research value is **edge computing and distributed systems**.
+
+---
+
+# 28. Kubernetes Research
+
+Once Docker infrastructure is stable, Kitty × Tweak Labs can build a small Kubernetes/k3s environment.
+
+Example:
+
+```text
+KTL Cluster
+
+Control Plane
+    │
+    ├── Pi Node 01
+    ├── Pi Node 02
+    ├── Debian Node
+    ├── Kitty GPU Node
+    └── Future GPU Node
+```
+
+Research topics:
+
+- scheduling
+- service discovery
+- distributed storage
+- GPU workloads
+- failover
+- observability
+- scaling
+- inference serving
+
+---
+
+# 29. HomeScale
+
+HomeScale becomes the project for exploring how far a serious AI research environment can be built from prosumer hardware.
+
+Questions:
+
+- How much useful research can be performed locally?
+- When does cloud compute become necessary?
+- How efficiently can heterogeneous GPUs cooperate?
+- How much infrastructure can run under constrained power budgets?
+- Can consumer systems behave like a miniature research cluster?
+
+---
+
+# 30. KTL Observatory
+
+All research systems should eventually feed telemetry into a unified observability system.
+
+Possible stack:
+
+```text
+Nodes
+ ↓
+Exporters / Agents
+ ↓
+Metrics
+ ↓
+Logs
+ ↓
+Traces
+ ↓
+KTL Observatory
+ ↓
+KERNEL//KITTY
+```
+
+Potential tracked values:
+
+- CPU
+- RAM
+- GPU
+- VRAM
+- storage
+- network
+- training loss
+- tokens/sec
+- model latency
+- power
+- temperature
+- experiment status
+
+---
+
+# 31. Synthetic Factory
+
+Synthetic Factory would explore responsibly generated training material.
+
+Examples:
+
+- coding exercises
+- bug-fixing tasks
+- reasoning traces
+- system-administration tasks
+- cybersecurity defensive scenarios
+- structured tool-use examples
+- agent interaction examples
+
+Synthetic data should always be labelled as synthetic.
+
+Quality filtering is mandatory.
+
+---
+
+# 32. PageMind
+
+PageMind could become a document understanding and RAG research platform.
+
+Potential data:
+
+- documentation
+- research papers
+- repositories
+- manuals
+- technical references
+
+Research:
+
+- chunking
+- embeddings
+- retrieval
+- reranking
+- citation
+- context compression
+- long-context comparison
+
+---
+
+# 33. ApexSim
+
+ApexSim could provide simulation environments for agent research.
+
+Examples:
+
+- simulated Linux machines
+- networks
+- coding repositories
+- service outages
+- defensive security scenarios
+- infrastructure incidents
+
+Agents could be evaluated without risking production systems.
+
+---
+
+# 34. TinyTron / TinyKitty Research
+
+Small models are extremely valuable for understanding architecture.
+
+Targets might include:
+
+- 10M
+- 25M
+- 50M
+- 100M
+- 250M
+- 500M parameters
+
+These can test architectural changes cheaply before transferring them into larger models.
+
+---
+
+# 35. Experiment Ledger
+
+Every significant experiment should have a record.
+
+Example:
+
+```yaml
+experiment: KTL-ATTN-0042
+project: KittyLM
+commit: abc123
+model:
+  parameters: 247M
+  architecture: GDN2
+tokenizer:
+  vocab: 16384
+dataset:
+  version: ktldata-v0.4
+  hash: ...
+hardware:
+  gpu: RX 9060 XT
+training:
+  precision: bf16
+  seed: 42
+results:
+  validation_loss: ...
+  tokens_per_second: ...
+```
+
+This eventually becomes one of the most valuable assets of the research lab.
+
+---
+
+# 36. Mandatory Model Accounting
+
+Every released model should document:
+
+- total parameters
+- trainable parameters
+- embedding parameters
+- attention parameters
+- FFN parameters
+- expert parameters
+- active parameters where sparse
+- vocabulary
+- layer count
+- hidden size
+- context length
+- training tokens
+- compute environment
+
+Numbers should be calculated rather than guessed.
+
+---
+
+# 37. Reproducibility Standard
+
+Each serious experiment should identify:
+
+```text
+Code
++
+Config
++
+Dataset
++
+Tokenizer
++
+Seed
++
+Hardware
++
+Environment
++
+Checkpoint
++
+Evaluation
+=
+Reproducible Experiment
+```
+
+---
+
+# 38. Repository Standards
+
+Important repositories should gradually include:
+
+```text
+README.md
+LICENSE
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+CHANGELOG.md
+docs/
+tests/
+examples/
+scripts/
+```
+
+ML repositories should additionally contain:
+
+```text
+configs/
+data/
+tokenizer/
+training/
+evaluation/
+benchmarks/
+checkpoints/
+experiments/
+```
+
+---
+
+# 39. CI/CD
+
+GitHub CI should eventually perform:
+
+- linting
+- formatting
+- unit tests
+- integration tests
+- security checks
+- dependency checks
+- config validation
+- documentation checks
+- small model smoke tests
+
+Large GPU tests can run on self-hosted runners.
+
+---
+
+# 40. Model Release Pipeline
+
+Possible future flow:
+
+```text
+Experiment
+   ↓
+Evaluation
+   ↓
+Review
+   ↓
+Checkpoint
+   ↓
+Model Card
+   ↓
+Hugging Face
+   ↓
+GGUF
+   ↓
+Ollama
+   ↓
+KittyOS / TweakOS
+```
+
+Not every experiment should become a public model.
+
+---
+
+# 41. Hugging Face Strategy
+
+The Kitty × Tweak Hugging Face ecosystem should contain:
+
+- model checkpoints
+- tokenizer releases
+- datasets where licensing permits
+- model cards
+- evaluation reports
+- experimental models
+- small educational models
+
+GitHub remains primarily the **source-code and engineering platform**.
+
+Hugging Face becomes primarily the **model/data research distribution platform**.
+
+---
+
+# 42. Security Research
+
+Security should be integrated throughout the lab.
+
+Focus:
+
+- defensive cybersecurity
+- secure software engineering
+- supply-chain security
+- dependency security
+- secrets management
+- container security
+- Linux hardening
+- agent safety
+- AI tool permissions
+- model supply chains
+
+Experiments involving offensive techniques should remain controlled, educational and isolated.
+
+---
+
+# 43. Virtual Security Lab
+
+VM environments can include:
+
+- Kali
+- Parrot
+- Windows
+- Linux servers
+- intentionally vulnerable systems
+
+The environment can support:
+
+- CompTIA CySA+ learning
+- digital forensics
+- incident response
+- malware-analysis fundamentals
+- SIEM practice
+- network analysis
+- security automation
+
+---
+
+# 44. Developer Education
+
+Kitty × Tweak Labs should also serve as an educational platform.
+
+Topics may include:
+
+- Python
+- C/C++
+- Rust
+- C#
+- JavaScript
+- TypeScript
+- Linux
+- Git
+- Docker
+- Kubernetes
+- networking
+- cybersecurity
+- ML
+- LLM architecture
+- distributed systems
+
+Research projects should double as opportunities to learn these technologies.
+
+---
+
+# 45. Research Publication Structure
+
+Research documents can use the following hierarchy:
+
+```text
+KTL-RFC
+KTL-ADR
+KTL-EXP
+KTL-BENCH
+KTL-REPORT
+KTL-PAPER
+```
+
+Examples:
+
+```text
+KTL-EXP-0001
+Tokenizer Vocabulary Scaling
+
+KTL-BENCH-0003
+ROCm vs CUDA Inference
+
+KTL-RFC-0004
+KittyTron Architecture
+
+KTL-ADR-0012
+Experiment Metadata Format
+```
+
+---
+
+# 46. GitHub Organization Strategy
+
+Long term, repositories may be grouped conceptually as:
+
+```text
+Kitty-Tweak-Labs/
+
+models/
+systems/
+agents/
+benchmarks/
+datasets/
+security/
+infrastructure/
+research/
+tools/
+```
+
+Individual personal repositories can remain under:
+
+- KrazyKitty
+- Tweak
+
+while genuinely joint projects can migrate into a shared organization when appropriate.
+
+---
+
+# 47. Twenty Flagship Project Concepts
+
+The initial project portfolio is:
+
+1. **KittyTron**  
+   Shared experimental language model.
+
+2. **DualForge**  
+   Shared model training framework.
+
+3. **DataForge**  
+   Dataset processing and provenance system.
+
+4. **ReasonKit**  
+   Reasoning and model evaluation framework.
+
+5. **KernelKit**  
+   Experimental low-level AI compute/kernel research.
+
+6. **CrossSilicon**  
+   AMD ROCm vs NVIDIA CUDA research.
+
+7. **TinyTron / TinyKitty**  
+   Small-model architecture laboratory.
+
+8. **KittyCoder**  
+   Coding-specialized LM.
+
+9. **KittyCyberLM**  
+   Defensive cybersecurity LM.
+
+10. **AgentVerse**  
+    AI agent runtime and evaluation system.
+
+11. **KittyOS**  
+    AI/developer Linux environment.
+
+12. **MCP Security Lab**  
+    AI tool-protocol security research.
+
+13. **PageMind**  
+    RAG and document-intelligence research.
+
+14. **KTL Compute Fabric**  
+    Distributed home-lab compute environment.
+
+15. **KTL Observatory**  
+    Research infrastructure telemetry.
+
+16. **HomeScale**  
+    Prosumer distributed AI infrastructure research.
+
+17. **ApexSim**  
+    Agent simulation environments.
+
+18. **Synthetic Factory**  
+    Synthetic training-data research.
+
+19. **SoulShell**  
+    Shared intelligent shell and system interface.
+
+20. **KTL Bench**  
+    Open reproducible benchmark platform.
+
+---
+
+# 48. Project Priority Tiers
+
+## Tier 0 — Existing foundations
+
+Already underway:
+
+- KittyLM
+- TweakTron
+- KittyOS
+- TweakOS research
+- KERNEL//KITTY
+- Debian-Kitty
+- home-lab infrastructure
+
+These remain the foundations.
+
+---
+
+## Tier 1 — Immediate shared research
+
+Build next:
+
+- shared experiment specification
+- architecture benchmark framework
+- tokenizer benchmark
+- DataForge foundations
+- ReasonKit foundations
+- CrossSilicon baseline
+- shared documentation standards
+
+---
+
+## Tier 2 — Shared tooling
+
+After Tier 1:
+
+- DualForge
+- KTL Bench
+- AgentVerse
+- Observatory integration
+- shared model registry
+
+---
+
+## Tier 3 — Distributed infrastructure
+
+Then:
+
+- Compute Fabric
+- dedicated GPU node
+- NAS
+- k3s
+- Raspberry Pi edge cluster
+- distributed inference
+
+---
+
+## Tier 4 — Advanced model research
+
+Then:
+
+- sparse systems
+- MoE
+- MoM
+- recurrence
+- adaptive computation
+- long context
+- KittyTron prototype
+
+---
+
+## Tier 5 — Research lab scale
+
+Long-term:
+
+- multiple GPU nodes
+- high-speed networking
+- rack infrastructure
+- distributed storage
+- automated experiment scheduling
+- larger model training
+- published technical reports
+
+---
+
+# 49. Hardware Acquisition Philosophy
+
+Every purchase should answer:
+
+> **Which experiment becomes possible because we bought this?**
+
+Examples:
+
+### RAM
+
+Enables:
+
+- larger datasets
+- VMs
+- compilation
+- preprocessing
+
+### NVMe
+
+Enables:
+
+- fast datasets
+- model checkpoints
+- training throughput
+
+### HDD / NAS
+
+Enables:
+
+- archives
+- model storage
+- backups
+
+### High-VRAM GPU
+
+Enables:
+
+- larger models
+- fine-tuning
+- training
+- faster inference
+
+### Raspberry Pi
+
+Enables:
+
+- edge inference
+- ARM
+- k3s
+- distributed services
+
+### Networking
+
+Enables:
+
+- shared datasets
+- distributed workloads
+- remote GPU execution
+
+---
+
+# 50. Professional Home-Lab Evolution
+
+Long-term architecture:
+
+```text
+              KITTY × TWEAK LABS
+
+                  Internet
+                     │
+                  Firewall
+                     │
+                 Core Switch
+                     │
+     ┌───────────────┼────────────────┐
+     │               │                │
+ Storage          Servers          Compute
+     │               │                │
+   NAS          Debian Nodes        GPUs
+     │               │                │
+     └───────────────┼────────────────┘
+                     │
+               Kubernetes / Jobs
+                     │
+             KTL Observatory
+                     │
+              KERNEL//KITTY
+```
+
+Eventually this could resemble a miniature professional research environment.
+
+---
+
+# 51. Research Milestones
+
+## Milestone A — Lab Foundation
+
+Define:
+
+- naming
+- repositories
+- experiment format
+- documentation standard
+
+## Milestone B — Shared Benchmarking
+
+Create:
+
+- tokenizer benchmark
+- model benchmark
+- hardware benchmark
+
+## Milestone C — Shared Data
+
+Build:
+
+- DataForge
+- dataset manifests
+- dataset versioning
+
+## Milestone D — Shared Model Infrastructure
+
+Build:
+
+- DualForge
+- ReasonKit
+- model registry
+
+## Milestone E — Distributed Lab
+
+Deploy:
+
+- compute fabric
+- shared storage
+- orchestration
+- monitoring
+
+## Milestone F — Architecture Research
+
+Run:
+
+- GDN
+- GDN2
+- FlashQLA
+- recurrence
+- sparse models
+- MoE
+- MoM
+
+## Milestone G — KittyTron
+
+Create the first genuinely joint experimental architecture.
+
+---
+
+# 52. Research Success Criteria
+
+Kitty × Tweak Labs succeeds when it produces:
+
+- reproducible experiments
+- genuine technical understanding
+- useful open-source projects
+- independent model implementations
+- documented architectural discoveries
+- credible benchmark results
+- increasingly capable infrastructure
+- educational material
+- stable operating systems and tooling
+- working distributed systems
+
+Success is **not measured solely by model size**.
+
+A clever 200M model experiment can matter more than an unexplained 7B checkpoint.
+
+---
+
+# 53. Long-Term Vision
+
+The ultimate goal is to progressively transform:
+
+```text
+Two developers
+        ↓
+Two independent research ecosystems
+        ↓
+Shared experiments
+        ↓
+Shared tooling
+        ↓
+Distributed home lab
+        ↓
+Original models
+        ↓
+Original architectures
+        ↓
+Published research
+        ↓
+Professional research laboratory
+```
+
+Kitty × Tweak Labs may eventually support research across:
+
+- artificial intelligence
+- language models
+- operating systems
+- distributed systems
+- cybersecurity
+- developer tooling
+- agents
+- networking
+- edge computing
+- hardware acceleration
+
+---
+
+# 54. The Core Principle
+
+The defining principle of Kitty × Tweak Labs should remain:
+
+> **We do not need a datacenter before we can do real research.**
+
+We need:
+
+- questions worth answering
+- experiments designed properly
+- measurements we can trust
+- systems we understand
+- documentation others can reproduce
+- and the willingness to keep learning.
+
+The hardware can grow with the research.
+
+The research comes first.
+
+---
+
+# KITTY × TWEAK LABS
+
+**Build it.  
+Measure it.  
+Break it.  
+Understand it.  
+Improve it.  
+Document it.  
+Build the next one.**
+
+**Research Master Plan v1.0**
