@@ -1,0 +1,1141 @@
+**KITTY × TWEAK LABS**  
+> *Models • Kernels • Agents • Cybersecurity • Distributed Systems*
+
+---
+
+# The Kitty × Tweak research stack
+
+I would visualize the eventual ecosystem like this:
+
+```text
+                         KITTY × TWEAK LABS
+                                 │
+       ┌─────────────────────────┼──────────────────────────┐
+       │                         │                          │
+       ▼                         ▼                          ▼
+  AI RESEARCH              SYSTEMS RESEARCH            SECURITY
+       │                         │                          │
+ KittyLM                    KittyOS                   Cybermes
+ TweakTron                  KERNEL//KITTY             x64dbg MCP
+ datasets                   AgentVerse-OS             OSINT lab
+ evaluations                containers/VMs            malware labs
+       │                         │                          │
+       └─────────────┬───────────┴───────────┬─────────────┘
+                     │                       │
+                     ▼                       ▼
+              DISTRIBUTED COMPUTE       AI AGENTS
+                     │                       │
+               Kitty PC                  OpenBot
+               Tweak PC                FrontierAgent
+               GPU nodes                KRAZY//CORE
+               Debian node              Discord bots
+               Raspberry Pis
+                     │
+                     ▼
+              ┌───────────────┐
+              │ HOME AI LAB   │
+              │ GPU SERVERS   │
+              │ NAS / STORAGE │
+              │ 10Gb NETWORK  │
+              │ K8s / Proxmox │
+              │ MONITORING    │
+              └───────────────┘
+
+
+# Top 20 joint research projects
+
+| # | Project | Core idea | Kitty contribution | Tweak contribution |
+|---|---|---|---|---|
+| 01 | **KittyTron** | Joint experimental language model | KittyLM pipeline/evaluation | TweakTron architecture/training |
+| 02 | **DualForge** | Distributed two-machine training/inference | orchestration + dashboard | CUDA/model optimization |
+| 03 | **K×T DataForge** | Reproducible dataset factory | filtering/UI/provenance | large-scale dataset design |
+| 04 | **ReasonKit** | reasoning-data research | Fable dataset experiments | training + evaluation |
+| 05 | **KernelKit** | experimental inference kernels | benchmark infrastructure | GDN/FlashQLA kernels |
+| 06 | **CrossSilicon Lab** | AMD-vs-NVIDIA ML research | RX 9060 XT/ROCm | RTX 5050/CUDA |
+| 07 | **TinyTron** | efficient 100M–1B models | KittyLM experiments | architecture optimization |
+| 08 | **KittyCoder** | local coding LM | software/cyber corpora | coding-model training |
+| 09 | **CyberLM** | defensive cybersecurity model | Cybermes/security labs | model architecture |
+| 10 | **AgentVerse Federation** | multi-agent research environment | AgentVerse/FrontierAgent | local models |
+| 11 | **KRAZY//CORE AI** | Telegram/Discord research interface | bots/frontend/API | inference backend |
+| 12 | **KittyOS AI Runtime** | AI-native Linux runtime | KittyOS | model/runtime optimisation |
+| 13 | **MCP Security Lab** | tool-using security agents | x64dbg MCP | reasoning models |
+| 14 | **PageMind** | document intelligence stack | PageLM/pdf3md/docstrange | specialist models |
+| 15 | **KERNEL//KITTY Compute Fabric** | unified infrastructure control plane | dashboards/telemetry | ML workers |
+| 16 | **Model Observatory** | ML experiment tracking | dashboard/Datadog | benchmark workloads |
+| 17 | **HomeScale** | mini distributed research cluster | Debian/Kubernetes | remote GPU worker |
+| 18 | **ApexSim** | AI accelerator architecture simulator | apex-inference-chip | kernel profiling |
+| 19 | **Synthetic Research Factory** | model-generated training/eval sets | workflow + validation | teacher models |
+| 20 | **Kitty × Tweak Bench** | public reproducible benchmark suite | orchestration/reporting | kernel/model benchmarks |
+
+---
+
+## 01 — KittyTron
+
+This would be your flagship joint research project.
+
+Instead of replacing KittyLM or TweakTron:
+
+```text
+KittyLM research
+     │
+     ├──── tokenizer
+     ├──── evaluation
+     ├──── experiment ledger
+     └──── reproducibility
+              │
+              ▼
+          KITTYTRON
+              ▲
+              │
+     ├──── TweakTron architecture
+     ├──── GDN experiments
+     ├──── datasets
+     └──── optimized kernels
+        Tweak research
+```
+
+Start small.
+
+**KittyTron-150M → 350M → 1B → 3B**
+
+That progression will teach you far more than immediately trying to train a huge model.
+
+---
+
+# 02 — DualForge distributed compute
+
+This could become one of your most valuable systems projects.
+
+Your two machines have complementary GPUs:
+
+### Kitty workstation
+
+- Ryzen 5 7500F
+- 6 cores / 12 threads
+- **Radeon RX 9060 XT 16 GB**
+- 32 GB DDR5
+- MSI B850 Gaming Plus WiFi
+- approximately **5.3 TB internal storage**
+- three NVMe drives + two HDDs
+- Windows host
+- ROCm experimentation
+- LM Studio / local inference
+
+### Tweak workstation
+
+What we currently have established is:
+
+- **NVIDIA RTX 5050 Laptop GPU**
+- Blackwell generation
+- **SM120**
+- CUDA-capable
+- already being used for Tweak's GDN/FlashQLA experiments.
+
+I don't currently have reliable CPU/RAM/storage details for Tweak's machine, so I wouldn't invent those.
+
+SM120 is particularly useful because current FlashQLA explicitly supports SM120 forward execution; upstream lists SM90, SM100, SM103 and SM120 support. [GitHub](https://github.com/QwenLM/FlashQLA/blob/main/README.md?utm_source=chatgpt.com)
+
+That creates an interesting research environment:
+
+```text
+AMD / ROCm                         NVIDIA / CUDA
+Kitty PC                           Tweak PC
+
+RX 9060 XT                         RTX 5050
+16GB VRAM                          Blackwell SM120
+     │                                  │
+     └──────── Tailscale / VPN ─────────┘
+                       │
+                       ▼
+                DUALFORGE SCHEDULER
+                       │
+              ┌────────┼────────┐
+              ▼        ▼        ▼
+           ROCm job  CUDA job  CPU job
+```
+
+You can literally study **cross-vendor inference portability**.
+
+That's a legitimate research subject.
+
+---
+
+# 03 — K×T DataForge
+
+You both already have enough dataset-related work to justify creating your own dataset platform.
+
+Pipeline:
+
+```text
+Raw sources
+    ↓
+license/provenance validation
+    ↓
+deduplication
+    ↓
+quality scoring
+    ↓
+PII filtering
+    ↓
+language detection
+    ↓
+content classification
+    ↓
+token statistics
+    ↓
+contamination detection
+    ↓
+train / validation / test
+    ↓
+dataset card
+    ↓
+Hugging Face
+```
+
+Your AI data extractor, PageLM/document tools and Python experience fit beautifully here.
+
+Tweak's multi-million-row datasets provide the scale.
+
+---
+
+# 04 — ReasonKit
+
+Your Fable dataset makes this particularly timely.
+
+Instead of merely collecting reasoning traces, compare:
+
+```text
+Original dataset
+       │
+       ├── filtered
+       ├── deduplicated
+       ├── difficulty scored
+       ├── answer verified
+       └── domain classified
+               │
+               ▼
+          Small model SFT
+               │
+        ┌──────┴──────┐
+        ▼             ▼
+   baseline       ReasonKit
+        │             │
+        └──── benchmark ────┘
+```
+
+The result becomes an actual research experiment rather than another model fine-tune.
+
+---
+
+# 05 — KernelKit
+
+This is where Tweak's low-level work becomes part of your shared ecosystem.
+
+Investigate:
+
+- Gated DeltaNet
+- FlashQLA
+- Triton
+- TileLang
+- PyTorch kernels
+- quantized kernels
+- memory bandwidth
+- fused operations
+- AMD equivalents
+- NVIDIA-specific optimizations.
+
+This would sit underneath KittyLM/TweakTron.
+
+---
+
+# 06 — CrossSilicon Lab
+
+This one is particularly unusual.
+
+Most hobby ML labs only have NVIDIA.
+
+You have:
+
+**RDNA / ROCm + Blackwell / CUDA.**
+
+So build a benchmark system that executes identical models on both.
+
+Measure:
+
+```text
+tokens/sec
+VRAM usage
+RAM usage
+power
+first-token latency
+prompt processing speed
+batch scaling
+quantisation
+kernel compatibility
+model compatibility
+```
+
+The results could eventually become a public website on `krazykitty.dev`.
+
+---
+
+# 07 — TinyTron
+
+Train genuinely small models.
+
+For example:
+
+```text
+50M
+100M
+150M
+350M
+700M
+1B
+```
+
+Experiment with:
+
+- attention variants
+- GDN
+- tokenizer sizes
+- context length
+- dataset mixtures
+- normalization
+- optimizers
+- RoPE
+- MoE
+- recurrent architectures.
+
+Training smaller models lets you run dozens of real scientific experiments instead of one enormous expensive run.
+
+---
+
+# 08 — KittyCoder
+
+Combine:
+
+- your repositories
+- software-development datasets
+- Tweak's coding models
+- your Python/TypeScript/Rust/C++ work.
+
+Build a coding assistant specialized around:
+
+```text
+Python
+Linux
+Docker
+Git
+Discord bots
+Telegram bots
+FastAPI
+cybersecurity tools
+homelab administration
+```
+
+It could eventually power KittyOS.
+
+---
+
+# 09 — CyberLM
+
+This connects your cybersecurity career directly with ML research.
+
+Use defensive datasets covering:
+
+- logs
+- CVEs
+- detection rules
+- incident reports
+- SIEM events
+- malware descriptions
+- network telemetry
+- CTF educational material.
+
+Research tasks could include:
+
+```text
+log → explanation
+alert → triage
+PCAP metadata → analysis
+vulnerability → mitigation
+incident → timeline
+rule → explanation
+```
+
+Keep actual malware execution confined to disposable isolated VMs.
+
+---
+
+# 10 — AgentVerse Federation
+
+You already have `AgentVerse-OS`, `FrontierAgent`, `OpenBot`, `viserys-agent` and other agent projects.
+
+Turn them into a research platform.
+
+```text
+                   ORCHESTRATOR
+                        │
+       ┌────────────────┼─────────────────┐
+       ▼                ▼                 ▼
+ Research Agent     Coding Agent      Cyber Agent
+       │                │                 │
+       ▼                ▼                 ▼
+   Web/RAG           GitHub/MCP        Lab VM
+       │                │                 │
+       └────────── Shared Memory ─────────┘
+```
+
+Then benchmark whether specialized agents outperform one generic agent.
+
+---
+
+# 11 — KRAZY//CORE AI gateway
+
+KRAZY//CORE becomes the human interface to all of this.
+
+Telegram could issue:
+
+```text
+/model status
+/gpu status
+/train kittytron
+/benchmark tweaktron
+/server status
+/datasets
+/experiments
+/jobs
+/logs
+```
+
+It becomes a pocket control panel for the lab.
+
+---
+
+# 12 — KittyOS AI runtime
+
+KittyOS shouldn't merely be another Linux distribution.
+
+Give it a reason to exist:
+
+> **A Linux distribution designed for local AI, cybersecurity laboratories and developer agents.**
+
+Preconfigured components could eventually include:
+
+- Docker/Podman
+- Python
+- ROCm/CUDA detection
+- Ollama
+- llama.cpp
+- PyTorch
+- Jupyter
+- VS Code
+- containers
+- VM management
+- Kitty agent runtime
+- telemetry.
+
+---
+
+# 13 — MCP Security Lab
+
+Your `x64dbg-mcp-server` is an excellent starting point.
+
+Architecture:
+
+```text
+LLM
+ │
+ ▼
+MCP Security Controller
+ │
+ ├── x64dbg
+ ├── Ghidra
+ ├── debugger VM
+ ├── static analysis
+ ├── PCAP viewer
+ └── YARA/Sigma tools
+```
+
+This gives you a controlled environment for studying **AI-assisted defensive reverse engineering**.
+
+---
+
+# 14 — PageMind
+
+Combine:
+
+- PageLM
+- `pdf3md`
+- `docstrange`
+- `ai-data-extractor`
+- RAG.
+
+You could create your own research-paper ingestion platform.
+
+Drop in a paper:
+
+```text
+PDF
+ ↓
+layout extraction
+ ↓
+figures + equations
+ ↓
+structured Markdown
+ ↓
+embeddings
+ ↓
+knowledge database
+ ↓
+research agent
+```
+
+That would be incredibly useful for your own studies.
+
+---
+
+# 15 — KERNEL//KITTY Compute Fabric
+
+Your dashboard can evolve beyond monitoring a single Debian machine.
+
+Eventually:
+
+```text
+KERNEL//KITTY
+│
+├── Kitty PC
+│   ├── GPU
+│   ├── CPU
+│   └── inference
+│
+├── Debian-Kitty
+│   ├── Docker
+│   ├── databases
+│   └── services
+│
+├── Tweak Node
+│   └── NVIDIA GPU
+│
+├── Pi Cluster
+│
+└── Future GPU Server
+```
+
+One control plane for the entire laboratory.
+
+---
+
+# 16 — Model Observatory
+
+Use your existing Datadog work.
+
+Record every experiment:
+
+```text
+model
+commit
+dataset hash
+GPU
+VRAM
+parameters
+tokens
+loss
+tokens/sec
+temperature
+power
+evaluation
+```
+
+This is essentially ML observability.
+
+---
+
+# 17 — HomeScale
+
+Build your own mini cloud.
+
+Initially:
+
+```text
+debian-kitty
+      +
+Kitty workstation
+      +
+Tweak workstation
+```
+
+Later:
+
+```text
+                 10 GbE
+                   │
+      ┌────────────┼────────────┐
+      │            │            │
+ GPU Node      Compute Node   Storage
+      │            │            │
+ Raspberry Pi  Raspberry Pi    NAS
+      │            │
+   services      cluster
+```
+
+Use:
+
+- Proxmox
+- Docker
+- Kubernetes/K3s
+- Tailscale
+- Ceph later
+- object storage
+- CI runners.
+
+---
+
+# 18 — ApexSim
+
+Your `apex-inference-chip` repository opens an interesting hardware path.
+
+You don't need to fabricate a chip.
+
+Build:
+
+- architecture simulator
+- memory hierarchy simulator
+- tensor-core simulator
+- scheduling experiments
+- kernel compiler concepts.
+
+Eventually FPGA experimentation becomes possible too.
+
+---
+
+# 19 — Synthetic Research Factory
+
+Create synthetic data from stronger teacher models, then automatically:
+
+1. generate;
+2. verify;
+3. score;
+4. deduplicate;
+5. classify;
+6. test;
+7. publish.
+
+This can continuously create experimental datasets for KittyLM/TweakTron.
+
+---
+
+# 20 — Kitty × Tweak Bench
+
+Every research lab needs measurement infrastructure.
+
+Create one benchmark command:
+
+```bash
+ktbench run model
+```
+
+which returns:
+
+```text
+Model: KittyTron-350M
+GPU: RX 9060 XT
+Backend: ROCm
+
+Prefill:       4,820 tok/s
+Decode:          138 tok/s
+Peak VRAM:      6.2 GB
+TTFT:           182 ms
+Context:       32K
+Power:          xxx W
+
+MMLU:
+HumanEval:
+IFEval:
+CyberBench:
+AgentBench:
+```
+
+Later results become public on `krazykitty.dev`.
+
+---
+
+# Your current physical compute foundation
+
+Your workstation is already quite respectable for learning and experimentation:
+
+```text
+KITTY WORKSTATION
+────────────────────────────────
+
+Ryzen 5 7500F
+6C / 12T
+
+32 GB DDR5
+
+Radeon RX 9060 XT
+16 GB VRAM
+
+MSI B850 Gaming Plus WiFi
+
+≈5.3 TB local storage
+├── NVMe
+├── NVMe
+├── NVMe
+├── HDD
+└── HDD
+
+Windows
+ROCm experimentation
+Docker
+LM Studio
+VMware
+```
+
+You've previously reached very high system RAM usage with large local models, so **RAM is one of the first upgrades I would make**. 
+
+---
+
+# RAM path
+
+For serious ML experimentation:
+
+```text
+CURRENT
+32 GB
+
+     ↓
+
+NEXT
+64 GB
+
+     ↓
+
+RESEARCH WORKSTATION
+96 / 128 GB
+```
+
+64 GB would immediately make local inference, VMs, containers and dataset preparation much more comfortable.
+
+128 GB becomes useful once you routinely:
+
+- preprocess large datasets;
+- run multiple VMs;
+- offload models;
+- compile ML stacks;
+- host vector databases;
+- use Kubernetes locally.
+
+---
+
+# Your Debian server
+
+Your existing `debian-kitty` should evolve into the **control node**, not necessarily the giant GPU machine.
+
+Conceptually:
+
+```text
+             DEBIAN-KITTY
+           CONTROL PLANE
+                 │
+ ┌───────────────┼─────────────────┐
+ │               │                 │
+Docker       Monitoring         Databases
+ │               │                 │
+Bots          Datadog         PostgreSQL
+APIs        KERNEL//KITTY       Redis
+ │
+Caddy
+ │
+Git runners
+```
+
+That is exactly the right role for a small always-on server.
+
+The precise CPU/RAM configuration of that server isn't in the reliable hardware record I have, so we'll want to inventory it before selecting upgrades. Its previously recorded local capacity was around **215 GB**, so storage expansion is definitely one obvious future step. 
+
+---
+
+# Building the professional-style home lab
+
+You don't need to jump straight into enterprise servers.
+
+A better path is:
+
+```text
+STAGE 1
+Desktop / Mini Homelab
+
+       ↓
+
+STAGE 2
+Rack + Network + NAS
+
+       ↓
+
+STAGE 3
+Virtualisation Cluster
+
+       ↓
+
+STAGE 4
+Dedicated GPU Compute
+
+       ↓
+
+STAGE 5
+Distributed AI Lab
+```
+
+A compact rack can already accommodate mini PCs, Raspberry Pis, networking, NAS/storage and dedicated monitoring hardware; modern homelab builds often use exactly that modular layout. 
+
+---
+
+# Stage 1 — Rack infrastructure
+
+I'd eventually build around roughly a:
+
+**12U–18U rack.**
+
+Conceptually:
+
+```text
+┌──────────────────────────────┐
+│ 1U Patch Panel               │
+├──────────────────────────────┤
+│ 1U 2.5/10GbE Switch         │
+├──────────────────────────────┤
+│ 1U Router / Firewall         │
+├──────────────────────────────┤
+│ 1U Pi / Mini-PC shelf        │
+├──────────────────────────────┤
+│ 2U Debian compute node       │
+├──────────────────────────────┤
+│ 2U NAS / Storage             │
+├──────────────────────────────┤
+│ 4U GPU AI Server             │
+├──────────────────────────────┤
+│ UPS / PDU                    │
+└──────────────────────────────┘
+```
+
+---
+
+# Stage 2 — networking
+
+Your eventual target should be:
+
+**2.5 GbE everywhere important → 10 GbE backbone.**
+
+That matters once large models and datasets start moving between systems.
+
+A single 40 GB model transferred across ordinary 1 GbE networking gets annoying very quickly.
+
+Ideal topology:
+
+```text
+Internet
+   │
+Firewall
+   │
+10GbE Switch
+   │
+   ├── Kitty PC
+   ├── GPU Server
+   ├── NAS
+   ├── Debian-Kitty
+   └── cluster
+```
+
+---
+
+# Stage 3 — NAS
+
+This should eventually become one of your largest investments.
+
+Target:
+
+**4–8 drive bays.**
+
+Use it for:
+
+```text
+/datasets
+/models
+/checkpoints
+/backups
+/docker-volumes
+/vm-images
+/git-mirrors
+/experiments
+/media
+```
+
+Eventually aim for something like:
+
+```text
+4 × 8 TB
+or
+4 × 12 TB
+```
+
+rather than trying to keep ML datasets scattered across individual computers.
+
+I'd also give the NAS SSD/NVMe caching later rather than starting there.
+
+---
+
+# Stage 4 — Raspberry Pis
+
+Pis should not perform your heavy ML training.
+
+They're excellent infrastructure nodes.
+
+I'd eventually have perhaps:
+
+```text
+Pi #1
+DNS / AdGuard
+
+Pi #2
+Prometheus exporters
+network monitoring
+
+Pi #3
+K3s worker
+
+Pi #4
+IoT / Adafruit / sensors
+
+Pi #5
+experimental ARM node
+```
+
+A **Pi 5 with 8–16 GB RAM** is particularly useful for experimenting with ARM containers and lightweight inference.
+
+---
+
+# Stage 5 — dedicated AI GPU server
+
+This becomes the monster.
+
+Instead of replacing your current PC, build another system specifically for ML.
+
+Concept:
+
+```text
+K×T GPU NODE
+
+High-core Ryzen / Threadripper / EPYC
+        │
+128–256 GB RAM
+        │
+2–4 TB fast NVMe scratch
+        │
+Large PSU
+        │
+GPU #1
+GPU #2 eventually
+        │
+10/25 GbE NIC
+```
+
+For AI work, **VRAM matters enormously**.
+
+Think in tiers:
+
+```text
+16 GB     experimentation
+24 GB     very useful
+32 GB     serious workstation
+48 GB     excellent ML node
+80+ GB    enterprise territory
+```
+
+Don't buy GPUs merely because they are faster gaming cards.
+
+For your work:
+
+> **VRAM capacity + software ecosystem + memory bandwidth are usually more important than gaming FPS.**
+
+---
+
+# Eventually: multiple GPU nodes
+
+The long-term architecture I see for you looks like:
+
+```text
+                   INTERNET
+                      │
+                  FIREWALL
+                      │
+                 10/25 GbE
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+       NAS                     KERNEL//KITTY
+  40–100+ TB                    controller
+        │                           │
+ ┌──────┼──────────┬───────────────┼──────────┐
+ │      │          │               │          │
+ ▼      ▼          ▼               ▼          ▼
+Kitty  Tweak    GPU NODE        Debian       Pi
+ PC     PC        #1            server     cluster
+AMD   NVIDIA   24–48GB+           │
+GPU    GPU        │               │
+ └──────┴─────────┴───────────────┘
+              COMPUTE FABRIC
+```
+
+And later:
+
+```text
+GPU NODE #2
+GPU NODE #3
+```
+
+without redesigning everything.
+
+---
+
+# Professional-server features worth copying
+
+You don't need datacenter hardware to behave like a datacenter.
+
+Build these capabilities progressively:
+
+**UPS power protection**, rack PDU, VLANs, 10GbE networking, redundant backups, ECC RAM where practical, ZFS storage, automatic snapshots, infrastructure-as-code, Git-based configuration, Prometheus/Grafana/Datadog monitoring, alerting, remote management, WireGuard/Tailscale, internal DNS, container orchestration and eventually out-of-band management.
+
+That is what actually makes your home lab **professional**, not merely owning a rack.
+
+---
+
+# One particularly important architecture decision
+
+Don't turn every machine into a clone.
+
+Give machines **roles**.
+
+```text
+Kitty PC
+│
+├── development
+├── ROCm
+├── VMs
+└── interactive AI
+
+Tweak PC
+│
+├── CUDA
+├── kernel development
+├── Blackwell testing
+└── NVIDIA benchmarks
+
+Debian-Kitty
+│
+├── orchestration
+├── APIs
+├── bots
+├── monitoring
+└── CI
+
+NAS
+│
+├── models
+├── datasets
+├── checkpoints
+└── backups
+
+Future GPU Server
+│
+├── training
+├── batch inference
+└── heavyweight jobs
+
+Raspberry Pis
+│
+├── networking
+├── sensors
+└── lightweight cluster
+```
+
+That is far more scalable.
+
+---
+
+# The research workflow
+
+Eventually every Kitty × Tweak experiment could follow the same lifecycle:
+
+```text
+                    IDEA
+                      │
+                      ▼
+               GitHub Issue
+                      │
+                      ▼
+             experiment.yaml
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+         Kitty GPU         Tweak GPU
+          ROCm               CUDA
+             │                 │
+             └────────┬────────┘
+                      ▼
+                   RESULTS
+                      │
+            ┌─────────┼─────────┐
+            ▼         ▼         ▼
+         Metrics    Logs      Weights
+            │         │         │
+            └─────────┼─────────┘
+                      ▼
+              KERNEL//KITTY
+                      │
+                      ▼
+                Experiment DB
+                      │
+                      ▼
+                Hugging Face
+                      +
+                   GitHub
+```
+
+That makes your projects **reproducible research**, rather than a pile of interesting experiments.
+
+---
+
+# I would create one umbrella repository
+
+Something like:
+
+```text
+kitty-tweak-labs/
+│
+├── README.md
+├── ROADMAP.md
+├── RESEARCH.md
+├── HARDWARE.md
+├── LAB_ARCHITECTURE.md
+│
+├── projects/
+│   ├── kittytron/
+│   ├── dualforge/
+│   ├── dataforge/
+│   ├── reasonkit/
+│   ├── kernelkit/
+│   └── cyberlm/
+│
+├── benchmarks/
+│
+├── experiments/
+│
+├── infrastructure/
+│
+└── papers/
+```
+**two-person independent AI/systems research infrastructure capable of designing datasets, 
+training models, optimizing kernels, operating distributed compute, evaluating models, 
+deploying agents, and publishing reproducible research.**
